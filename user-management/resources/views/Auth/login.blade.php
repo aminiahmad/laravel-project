@@ -1,5 +1,6 @@
 <?php
 @section('content')
+    <p>حساب نداری؟ <a href="{{ route('register') }}">ثبت‌نام کن</a></p>
     <h1>ورود</h1>
     <form method="POST" action="{{ route('login') }}">
         @csrf

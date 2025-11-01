@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d9c805d-c2be-42c5-b010-57fe48a26ea7" name="Changes" comment="initial project">
-      <change afterPath="$PROJECT_DIR$/user-management/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/resources/views/Auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/resources/views/Auth/register.blade.php" afterDir="false" />
+    <list default="true" id="6d9c805d-c2be-42c5-b010-57fe48a26ea7" name="Changes" comment="create routes and login,register controller">
+      <change afterPath="$PROJECT_DIR$/user-management/app/Http/Middleware/CheckRole.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/app/Http/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/app/Http/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/database/seeders/AdminUserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/app/Http/Auth/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/database/seeders/AdminUserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/database/seeders/AdminUserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/resources/views/Auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/resources/views/Auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-management/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -327,7 +328,9 @@
       <updated>1761981587545</updated>
       <workItem from="1761981595070" duration="335000" />
       <workItem from="1761981981110" duration="3336000" />
-      <workItem from="1761987113252" duration="3582000" />
+      <workItem from="1761987113252" duration="6707000" />
+      <workItem from="1761993873540" duration="2604000" />
+      <workItem from="1761997946576" duration="496000" />
     </task>
     <task id="LOCAL-00001" summary="initial project">
       <option name="closed" value="true" />
@@ -345,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761986909385</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create routes and login,register controller">
+      <option name="closed" value="true" />
+      <created>1761990745891</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761990745891</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,6 +375,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial project" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial project" />
+    <MESSAGE value="create routes and login,register controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="create routes and login,register controller" />
   </component>
 </project>
