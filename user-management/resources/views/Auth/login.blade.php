@@ -1,5 +1,3 @@
-<?php
-@section('content')
     <p>حساب نداری؟ <a href="{{ route('register') }}">ثبت‌نام کن</a></p>
     <h1>ورود</h1>
     <form method="POST" action="{{ route('login') }}">
@@ -8,4 +6,3 @@
         <div><input name="password" type="password" placeholder="رمز"></div>
         <button type="submit">ورود</button>
     </form>
-@endsection

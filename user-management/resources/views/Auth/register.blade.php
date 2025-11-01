@@ -1,4 +1,3 @@
-@section('content')
 <h1>ثبت‌نام</h1>
 <form method="POST" action="{{ route('register') }}">
     @csrf
@@ -8,4 +7,3 @@
     <div><input name="password_confirmation" type="password" placeholder="تکرار رمز"></div>
     <button type="submit">ثبت‌نام</button>
 </form>
-@endsection
