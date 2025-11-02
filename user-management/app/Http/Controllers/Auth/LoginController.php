@@ -19,7 +19,6 @@ class LoginController extends Controller{
             $request->session()->regenerate();
             $user = Auth::user();
             return redirect()->route($user->role==="admin"?'adminDashboard':"userDashboard");
-
         }
         return back()->withErrors([
             'email'=>'ایمیل نا معتبر است'

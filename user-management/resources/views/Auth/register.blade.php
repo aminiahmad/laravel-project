@@ -52,6 +52,7 @@
 </head>
 <body>
 <div class="container">
+    <p>حساب داری؟ <a href="{{ route('login') }}">وارد شو</a></p>
     <h1>ثبت‌نام</h1>
     <form method="POST" action="{{ route('register.submit') }}">
         @csrf

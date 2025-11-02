@@ -1,6 +1,8 @@
 <?php
+
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -16,11 +18,12 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 
 Route::get('user/dashboard', fn() => view('user.dashboard'))->name('userDashboard');
+
 Route::get('admin/dashboard', function () {
-    $users = User::all();
     $admin = Auth::user();
-    return view('admin.dashboard', compact('users', 'admin'));
+    return view('admin.dashboard', compact('admin'));
 })->middleware('auth')->name('adminDashboard');
-//Route::middleware('role:admin')->group(function(){
-//        Route::resource('users', UserController::class);
-//    });
+
+Route::middleware('role:admin')->group(function () {
+    Route::resource('users', UserController::class);
+});

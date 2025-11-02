@@ -16,18 +16,20 @@
             padding: 0;
             color: #333;
         }
-        input{
+
+        input {
             outline: none;
             border-radius: 5px;
             margin-top: 5px;
         }
+
         .container {
             max-width: 600px;
             margin: 60px auto;
             background: white;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 

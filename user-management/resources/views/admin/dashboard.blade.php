@@ -81,6 +81,7 @@
         .logout:hover {
             background-color: #2980b9;
         }
+
     </style>
 </head>
 <body>
@@ -95,33 +96,8 @@
         @csrf
         <button type="submit" class="btn logout">خروج</button>
     </form>
+    <a href="{{ route('users.index') }}" class="btn" style="background-color:#27ae60;">مدیریت کاربران</a>
 
-    <h2>لیست کاربران</h2>
-
-    <table>
-        <thead>
-        <tr>
-            <th>شناسه</th>
-            <th>نام</th>
-            <th>ایمیل</th>
-            <th>نقش</th>
-        </tr>
-        </thead>
-        <tbody>
-        @forelse($users as $user)
-            <tr>
-                <td>{{ $user->id }}</td>
-                <td>{{ $user->name }}</td>
-                <td>{{ $user->email }}</td>
-                <td>{{ $user->role }}</td>
-            </tr>
-        @empty
-            <tr>
-                <td colspan="4" style="text-align: center;">هیچ کاربری یافت نشد.</td>
-            </tr>
-        @endforelse
-        </tbody>
-    </table>
 </div>
 </body>
 </html>
