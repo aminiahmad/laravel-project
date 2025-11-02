@@ -17,7 +17,9 @@ class LoginController extends Controller{
         ]);
         if(Auth::attempt($credentials,$request->boolean('remember'))){
             $request->session()->regenerate();
-            return redirect()->route('dashboard');
+            $user = Auth::user();
+            return redirect()->route($user->role==="admin"?'adminDashboard':"userDashboard");
+
         }
         return back()->withErrors([
             'email'=>'ایمیل نا معتبر است'

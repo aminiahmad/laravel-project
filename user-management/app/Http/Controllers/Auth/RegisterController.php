@@ -26,6 +26,6 @@ class RegisterController extends Controller
             'role' => 'user',
         ]);
         auth()->login($user);
-        return redirect()->route('dashboard');
+        return redirect()->route($user->role==="admin" ?'adminDashboard':"userDashboard");
     }
 }

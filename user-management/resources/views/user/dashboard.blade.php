@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>صفحه ورود</title>
+    <title>پنل کاربری</title>
     <style>
         body {
             font-family: sans-serif;
@@ -16,11 +14,7 @@
             padding: 0;
             color: #333;
         }
-        input{
-            outline: none;
-            border-radius: 5px;
-            margin-top: 5px;
-        }
+
         .container {
             max-width: 600px;
             margin: 60px auto;
@@ -34,6 +28,12 @@
         h1 {
             color: #2c3e50;
         }
+
+        .info {
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+
         .btn {
             display: inline-block;
             margin-top: 20px;
@@ -52,23 +52,21 @@
 </head>
 <body>
 <div class="container">
-<p>حساب نداری؟ <a href="{{ route('register') }}">ثبت‌نام کن</a></p>
-    <h1>ورود</h1>
-    <form method="POST" action="{{ route('login') }}">
+    @php
+        $user = auth()->user();
+    @endphp
+
+    <h1>👋 خوش آمدید، {{ $user->name }}</h1>
+
+    <div class="info">
+        <p><strong>نام:</strong> {{ $user->name }}</p>
+        <p><strong>ایمیل:</strong> {{ $user->email }}</p>
+        <p><strong>نقش:</strong> {{ $user->role }}</p>
+    </div>
+    <form method="POST" action="{{ route('logout') }}">
         @csrf
-        <div><input name="email" value="{{ old('email') }}" placeholder="ایمیل"></div>
-        <div><input name="password" type="password" placeholder="رمز"></div>
-        <button type="submit" class="btn">ورود</button>
+        <button type="submit" class="btn">خروج از حساب</button>
     </form>
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 </div>
 </body>
 </html>
